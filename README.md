@@ -188,3 +188,32 @@ All stored procedures used for loading data must follow the naming pattern:
   <img width="720" height="525" alt="image" src="https://github.com/user-attachments/assets/a0741990-5dbd-434b-ad36-f3f3bc2847f4" />
 ---
 
+# Now start with Bronze layer
+- Step 1: Analyse the source system
+- understand the source system
+- After understanding the source system start coding [Data ingestion]
+- Data validation -> data Completeness and schema check -> is data is placed to its right position or not
+- last step is documentation of our work
+---
+<img width="935" height="207" alt="image" src="https://github.com/user-attachments/assets/68f9934b-ec17-4e5f-9b42-99334355407c" />
+
+---
+## Build source Systems 
+- Analyse Source Systems
+---
+  <img width="763" height="470" alt="image" src="https://github.com/user-attachments/assets/6e022eb6-8e4d-4b20-8923-0c77644a118c" />
+
+---
+- started Building Bronge layer
+- Create DDL for Tables
+  * here are some specification of bronze layer
+    <img width="405" height="523" alt="image" src="https://github.com/user-attachments/assets/b0cb92d1-48ac-4e93-bcfc-e3caeab9a614" />
+---
+- DDl -> Data Defination languages define the  structure of database yables
+- 
+
+
+  
+
+  
+
