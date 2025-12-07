@@ -352,5 +352,13 @@ maintenance NVARCHAR(50),
 )
 go
 ```
-* Develop SQL load script
+# Develop SQL load script
+- and the method used for loading the data from source file to data base is bulk insert
+
+---
+
+<img width="763" height="472" alt="image" src="https://github.com/user-attachments/assets/a2c06c95-11e6-4ed6-a7bf-00ad9d538f79" />
+
+---
+
 
