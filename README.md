@@ -1,5 +1,8 @@
 # Data_warehouse_project
 
+Welcome to the Data Warehouse and Analytical Project repository.
+This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry-based practices in the data engineering and analytics. 
+---
 - the first thing is we needd to create a project plan
 - for creating a project plan we will use Notion
 - Notion will help you to organise your plans, ideas all-in-one place.
@@ -10,7 +13,7 @@
   # What we’re going to do in this project are
   **project requirement** Building the data warehouse (data engineering).
  - **Objective** The objective of the project is to develop a modern data warehouse using SQL serevr to consolidate sales data, enabling analytical reports and informed decision making.
-## What are the specifications of the project?
+## What are the **specifications** of the project?
 1. **Data sources** - Import data from the source systems, ERP and CRM provided  as CSV file.
 2. **Data quality** - Cleans and resolves data quality issues prior to analysis.
 3. **Integration** - Combine both sources into a single user-friendly data model designed for analytical queries.
@@ -177,4 +180,9 @@ All stored procedures used for loading data must follow the naming pattern:
   Examples:
   - load_bronze → Stored procedure for loading data into the Bronze layer.
   - load_silver → Stored procedure for loading data into the Silver layer.
+ 
+---
+## Project Initialization
+* Create Database & Schemas
+  
 
