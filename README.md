@@ -35,13 +35,27 @@
 - The component of your architecture must not be duplicated. So, we cannot have two parts doing the same thing.
 - The idea here is not to mix the two parts. 
 - if you are a good data architect you should never combine diffrent layers of
+---
 <img width="801" height="523" alt="image" src="https://github.com/user-attachments/assets/16a9523d-239d-4e1a-a043-d2573e3386b6" />
+---
   -- keep SOC  [sepration of concerns] -> A good data architect follows this concept
 
 --- 
 # Using Draw.io to desining  and draw the Data Architecture 
   <img width="861" height="417" alt="image" src="https://github.com/user-attachments/assets/e68e0217-c235-4c12-8cbe-51770760768e" />
+---
  - right now all the conatiner are empty so we need to add content in these containers
-  What are different types of source systems which are connected to a data structure architecture?
-  
-
+ - What are different types of source systems which are connected to a data structure architecture?
+ - 
+<img width="191" height="421" alt="image" src="https://github.com/user-attachments/assets/04ef39ef-5458-4cdc-81d8-7f63a23bdd59" />
+* This way, we had made in the data architecture clear that what are the sources of the data.
+- Designed the sources of the High level Architecture
+---  
+<img width="187" height="430" alt="image" src="https://github.com/user-attachments/assets/01a88d82-066a-45cb-acd9-f4f880d41b15" />
+---
+- Next thing we're going to do is design what will be the content of the bronze, silver, and gold layers.
+ --- 
+<img width="1007" height="749" alt="image" src="https://github.com/user-attachments/assets/07f5eb7a-5457-4263-a7c6-701cbef19ceb" />
+ ---
+- One more resource for icons we had used that is flat icons
+- 
