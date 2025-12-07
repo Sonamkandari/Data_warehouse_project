@@ -71,5 +71,19 @@
 ---
 - One more resource for icons we had used that is flaticons from this we can any specific and new special icon in our drawing board
 ---
-
+# General Principles 
+# Defining Naming Conventions
+* Set of Rules Or Guidelines for naming anything in the project
+  - Database
+  - Schema
+  - Tables
+  - Store Procedures
+* For this project we gonna use nnake_case naming convension
+---
+  <img width="669" height="390" alt="image" src="https://github.com/user-attachments/assets/5441c054-d6df-428a-a79f-68a5d46861f5" />
   
+---D
+- Decide the language 
+
+  <img width="733" height="477" alt="image" src="https://github.com/user-attachments/assets/c4978580-6d87-4f2c-b388-1022874c6b72" />
+
