@@ -16,7 +16,7 @@
 3. **Integration** - Combine both sources into a single user-friendly data model designed for analytical queries.
 4. **Scope** - Focus on the latest dataset only (historic data). Authorization of the data is not required.
 5. **Documentation** - Provide a clean documentation model to support both businesses and stakeholders' analytical requirements.
-
+---
 <img width="754" height="541" alt="image" src="https://github.com/user-attachments/assets/84564431-9d9f-4e42-ad6a-e62296514548" />
 
 ---
