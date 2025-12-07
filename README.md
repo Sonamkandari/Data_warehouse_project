@@ -82,20 +82,103 @@
 ---
   <img width="669" height="390" alt="image" src="https://github.com/user-attachments/assets/5441c054-d6df-428a-a79f-68a5d46861f5" />
   
----D
-- Decide the language 
-
-  <img width="733" height="477" alt="image" src="https://github.com/user-attachments/assets/c4978580-6d87-4f2c-b388-1022874c6b72" />
-
----
-<img width="742" height="516" alt="image" src="https://github.com/user-attachments/assets/ead0309e-b949-4976-8f85-7d9545a4b01c" />
-
 ---
 
-<img width="578" height="376" alt="image" src="https://github.com/user-attachments/assets/2331867a-3002-412e-b4d3-3cddb109a4fd" />
+# General Principles
 
----
+Naming Conventions: Use snake_case, with lowercase letters and underscores (_) to separate words.
 
-<img width="729" height="396" alt="image" src="https://github.com/user-attachments/assets/8c897c3a-ce6e-4b04-9ac5-5147d88af97a" />
+Language: Use English for all names.
 
+Avoid Reserved Words: Do not use SQL reserved words as object names.
+
+# Table Naming Conventions
+
+## Bronze Rules
+
+All names must start with the source system name, and table names must match their original names without renaming.
+
+<sourcesystem>_<entity>
+
+<sourcesystem>: Name of the source system (e.g., crm, erp).
+
+<entity>: Exact table name from the source system.
+
+Example: crm_customer_info → Customer information from the CRM system.
+
+## Silver Rules
+
+All names must start with the source system name, and table names must match their original names without renaming.
+
+<sourcesystem>_<entity>
+
+<sourcesystem>: Name of the source system (e.g., crm, erp).
+
+<entity>: Exact table name from the source system.
+
+Example: crm_customer_info → Customer information from the CRM system.
+
+## Gold Rules
+
+All names must use meaningful, business-aligned names for tables, starting with the category prefix.
+
+<category>_<entity>
+
+<category>: Describes the role of the table, such as dim (dimension) or fact (fact table).
+
+<entity>: Descriptive name of the table, aligned with the business domain (e.g., customers, products, sales).
+
+Examples:
+
+dim_customers → Dimension table for customer data.
+
+fact_sales → Fact table containing sales transactions.
+
+# Glossary of Category Patterns
+
+Pattern | Meaning | Example(s)
+------- | -------- | ------------
+dim_ | Dimension table | dim_customer, dim_product
+fact_ | Fact table | fact_sales
+agg_ | Aggregated table | agg_customers, agg_sales_monthly
+
+# Column Naming Conventions
+
+## Surrogate Keys
+
+All primary keys in dimension tables must use the suffix _key.
+
+<table_name>_key
+
+<table_name>: Name of the table or entity the key belongs to.
+
+_key: A suffix indicating that this column is a surrogate key.
+
+Example: customer_key → Surrogate key in the dim_customers table.
+
+## Technical Columns
+
+All technical columns must start with the prefix dwh_, followed by a descriptive name indicating the column’s purpose.
+
+dwh_<column_name>
+
+dwh: Prefix exclusively for system-generated metadata.
+
+<column_name>: Descriptive name indicating the column’s purpose.
+
+Example: dwh_load_date → System-generated column used to store the date when the record was loaded.
+
+# Stored Procedure
+
+All stored procedures used for loading data must follow the naming pattern:
+
+load_<layer>
+
+<layer>: Represents the layer being loaded, such as bronze, silver, or gold.
+
+Examples:
+
+load_bronze → Stored procedure for loading data into the Bronze layer.
+
+load_silver → Stored procedure for loading data into the Silver layer.
 
