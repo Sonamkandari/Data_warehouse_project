@@ -39,6 +39,9 @@
   -- keep SOC  [sepration of concerns] -> A good data architect follows this concept
 
 --- 
-# Using Draw.io to desing and draw the Data Architecture 
+# Using Draw.io to desining  and draw the Data Architecture 
+  <img width="861" height="417" alt="image" src="https://github.com/user-attachments/assets/e68e0217-c235-4c12-8cbe-51770760768e" />
+ - right now all the conatiner are empty so we need to add content in these containers
+  What are different types of source systems which are connected to a data structure architecture?
   
-  
+
