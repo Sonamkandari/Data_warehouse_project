@@ -222,6 +222,9 @@ All stored procedures used for loading data must follow the naming pattern:
 If the source data is in an Excel or CSV file (e.g., customer details), we create a table in SQL Server that matches the structure of the file: same columns, correct data types, and a suitable table name.
 
 Once the table is created, we can load/import the data into SQL Server without errors.
+---
+- created data base and shemas of all the tree layers
+<img width="1235" height="576" alt="image" src="https://github.com/user-attachments/assets/f65ac2fe-38cf-4964-a816-841e751f921f" />
 
   
 
