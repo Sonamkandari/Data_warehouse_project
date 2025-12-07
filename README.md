@@ -207,8 +207,11 @@ All stored procedures used for loading data must follow the naming pattern:
 ---
 - started Building Bronge layer
 - Create DDL for Tables
-  * here are some specification of bronze layer
-    <img width="405" height="523" alt="image" src="https://github.com/user-attachments/assets/b0cb92d1-48ac-4e93-bcfc-e3caeab9a614" />
+-  here are some specification of bronze layer
+ 
+---
+  <img width="405" height="523" alt="image" src="https://github.com/user-attachments/assets/b0cb92d1-48ac-4e93-bcfc-e3caeab9a614" />
+    
 ---
 - DDl -> Data Defination languages define the  structure of database yables
 ---
