@@ -506,3 +506,31 @@ EXEC.bronze.load_bronze
 <img width="684" height="71" alt="image" src="https://github.com/user-attachments/assets/97ed3c5b-4273-4903-abf1-0be70d1184f3" />
 
 ---
+
+- we gonna calculate the Duration
+- for calculating the duration we have to know the starting time and Ending time
+- when we started loading the table and when we stoped loading the table
+
+```
+SET @start_time=GETDATE(); -- when we start loading this table
+PRINT'>> Truncating Table:bronze.crm_cust_info '
+Truncate table bronze.crm_cust_info;
+-- Write SQL BULK insert to load all CSV Files
+PRINT'>>Inserting Data Into:bronze.crm_cust_info '
+BULK INSERT bronze.crm_cust_info
+from 'E:\Extract_source_files\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
+with (
+ firstrow=2,
+ fieldterminator=',',
+ tablock
+);
+ SET @end_time=GETDATE(); -- when we end loading this table
+-- Print Duration
+PRINT'>> Load Duration:'+ CAST(DATEDUFF(second,@start_time,@end_time)AS NVARCHAR)+ 'seconds';
+PRINT'>> Truncating Table:bronze.crm_prd_info '
+```
+![Uploading image.png…]()
+
+---
+
+
