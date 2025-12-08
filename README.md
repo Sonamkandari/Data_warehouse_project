@@ -530,12 +530,12 @@ PRINT'>> Load Duration:'+ CAST(DATEDUFF(second,@start_time,@end_time)AS NVARCHAR
 PRINT'>> Truncating Table:bronze.crm_prd_info '
 ```
 ---
-
-<img width="491" height="647" alt="image" src="https://github.com/user-attachments/assets/dd82bc05-b353-47a7-9a8a-cccfef7e1068" />
+![Uploading image.png…]()
 
 ---
 ## Calculating the Duration of loading all Bronze tables
 ---
-![Uploading image.png…]()
+<img width="491" height="647" alt="image" src="https://github.com/user-attachments/assets/dd82bc05-b353-47a7-9a8a-cccfef7e1068" />
+
 ---
 
