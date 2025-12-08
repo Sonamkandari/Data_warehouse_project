@@ -538,11 +538,14 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 
 ---
 - Calculation the duration of whole Bronge layer "Whole Batch"
-![Uploading image.png…]()
+<img width="475" height="502" alt="image" src="https://github.com/user-attachments/assets/02b923e7-0f68-42ec-8383-c684ee01dc43" />
 ---
 
 ## Document: Dataflow (Draw.io)
-- Data Lineage
+---
+ ![Uploading image.png…]()
+---
+- **Data Lineage:** Data Lineage is the end-to-end visibility of data’s origin, movement, transformations, and destination.
 ---
 
 
