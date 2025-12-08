@@ -39,3 +39,7 @@ The Bronze layer is the **raw data ingestion layer** of the data warehouse. It s
 - Implemented print logs to trace ETL progress and improve debugging.
 
 ---
+## Data Flow
+----
+<img width="475" height="502" alt="image" src="https://github.com/user-attachments/assets/74c55d9b-f4b8-44ae-910b-4712b4c149a3" />
+---
