@@ -3,13 +3,12 @@
 - **Welcome to the Data Warehouse and Analytical Project repository.
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry-based practices in the data engineering and analytics.** 
 ---
-- the first thing is we needd to create a project plan
-- for creating a project plan we will use Notion
-- Notion will help you to organise your plans, ideas all-in-one place.
-- For creating a successful project, we need to have a clear project plan.
-- Right now, I am at the beginning phase of my project. So, I am using the Notion tool for creating a basic project plan for my project.
-- By using the Notion, we will create the main phases and stages of the project.
-
+- The first step in my work is to create a clear project plan.
+- For this purpose, I am using Notion, a tool that helps organize plans, ideas, and documentation in one place.
+- A well-structured project plan is essential for executing a successful project.
+- Since I am currently in the initial phase of my project, I am using Notion to create a basic project roadmap.
+- Using Notion, I will outline the main phases, milestones, and stages of the project.
+---
   # What we’re going to do in this project are
   **project requirement** Building the data warehouse (data engineering).
  - **Objective** The objective of the project is to develop a modern data warehouse using SQL serevr to consolidate sales data, enabling analytical reports and informed decision making.
