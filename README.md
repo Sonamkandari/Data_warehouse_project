@@ -502,6 +502,6 @@ EXEC.bronze.load_bronze
 - The bottle is wide → can hold a lot of water
 - But the neck is narrow → only a small amount can flow out at a time
 - Similarly, in any workflow, the narrowest (slowest) part controls how fast the entire process can move.
-- 
+---
 <img width="684" height="71" alt="image" src="https://github.com/user-attachments/assets/97ed3c5b-4273-4903-abf1-0be70d1184f3" />
 ---
