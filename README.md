@@ -541,7 +541,8 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 ![Uploading image.png…]()
 ---
 
-## what i have done to build bronze layer
-- step 1: load data
-- step 2: ETL
-- Step ther
+## Document: Dataflow (Draw.io)
+- Data Lineage
+---
+
+
