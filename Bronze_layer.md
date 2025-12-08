@@ -1,40 +1,41 @@
-✅ Bronze Layer — Completed Work in 4 Steps
-1️⃣ Analyzed Source Systems (CRM & ERP)
+## 🟫 Bronze Layer — Summary of Work Completed
 
-Reviewed all CSV files from CRM and ERP.
+The Bronze layer is the **raw data ingestion layer** of the data warehouse. It stores data exactly as received from the CRM and ERP source systems without any transformation.
 
-Understood each table, its structure, and the meaning of every column.
+---
 
-2️⃣ Designed & Built the Bronze Layer Structure
+### ✅ 1️⃣ Analyze Source Systems (CRM & ERP)
+- Reviewed all CSV files provided by the CRM and ERP systems.  
+- Understood all columns, data types, and table structures.  
+- Mapped how each file will be represented in the Bronze layer.
 
-Created the DataWarehouse database.
+---
 
-Created bronze, silver, and gold schemas.
+### ✅ 2️⃣ Design & Build the Bronze Layer Structure
+- Created the **DataWarehouse** database.
+- Defined schemas: **bronze**, **silver**, **gold**.
+- Built DDL tables for the Bronze layer matching the exact structure of the source CSVs.
+- Ensured the Bronze layer remains a **raw, unmodified copy** of the source systems.
 
-Created all Bronze DDL tables matching the exact structure of the source CSVs (no transformations, no renaming).
+---
 
-3️⃣ Loaded Raw Data into Bronze Using BULK INSERT
+### ✅ 3️⃣ Load Raw Data into Bronze (ETL: Extract & Load)
+- Wrote SQL `BULK INSERT` scripts to ingest CRM and ERP CSV files.
+- Developed the stored procedure **`bronze.load_bronze`** to automate:
+  - Truncating tables before loading  
+  - Loading all CSV files  
+  - Logging execution steps  
+  - Handling errors using TRY/CATCH  
 
-Wrote SQL scripts to ingest all CRM & ERP CSV files.
+---
 
-Created a stored procedure bronze.load_bronze to automate:
+### ✅ 4️⃣ Add Monitoring & Performance Tracking
+- Added variables to capture:
+  - **@start_time** — when each table load begins  
+  - **@end_time** — when the load completes  
+- Computed:
+  - **Load duration per table (seconds)**  
+  - **Total batch duration for the Bronze layer**
+- Implemented print logs to trace ETL progress and improve debugging.
 
-Truncation of tables
-
-BULK INSERT loading
-
-Print statements for debugging
-
-TRY/CATCH error handling
-
-Successfully loaded all source files into the Bronze tables.
-
-4️⃣ Added Monitoring & Performance Tracking
-
-Added variables to capture start_time and end_time.
-
-Calculated duration of each table load.
-
-Calculated total batch duration for the entire Bronze layer.
-
-Added print logs to trace the ETL steps clearly.
+---
