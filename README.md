@@ -530,12 +530,18 @@ PRINT'>> Load Duration:'+ CAST(DATEDUFF(second,@start_time,@end_time)AS NVARCHAR
 PRINT'>> Truncating Table:bronze.crm_prd_info '
 ```
 ---
-![Uploading image.png…]()
-
+<img width="432" height="127" alt="image" src="https://github.com/user-attachments/assets/cfe39c5e-d34e-4164-bf88-41b8b95bd772" />
 ---
 ## Calculating the Duration of loading all Bronze tables
 ---
 <img width="491" height="647" alt="image" src="https://github.com/user-attachments/assets/dd82bc05-b353-47a7-9a8a-cccfef7e1068" />
 
 ---
+- Calculation the duration of whole Bronge layer "Whole Batch"
+![Uploading image.png…]()
+---
 
+## what i have done to build bronze layer
+- step 1: load data
+- step 2: ETL
+- Step ther
