@@ -550,10 +550,19 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 ## Second part of the project to build Silver Layer of the Project
 - what we gonna do in it now
 ---
-![Uploading image.png…]()
+ ## Analysing: Explore & Understand Data
+ ## Document: Draw Data Integration (Draw.io) 
+---
+<img width="1073" height="596" alt="image" src="https://github.com/user-attachments/assets/574e59a6-1bc6-418a-89b4-e43c6bd3ef22" />
+
 ---
 - Explore & Understand the data
 - visualizing tables of CRM csv files
-- 
+---
+![Uploading image.png…]()
+---
+## coding: Data Cleansing
+## validating: Data Correcctness Checks
+
 
 
