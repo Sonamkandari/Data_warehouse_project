@@ -555,10 +555,20 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 - Explore & Understand the data
 - visualizing tables of CRM csv files
 ---
-![Uploading image.png…]()
+
+<img width="296" height="518" alt="image" src="https://github.com/user-attachments/assets/05128960-06b9-4a0c-84cb-76738be2f9eb" />
+
 ---
 ## coding: Data Cleansing
 ## validating: Data Correcctness Checks
+---
+specification of Bronze layer
+![Uploading image.png…]()
+---
+## Building data Defination language for bronze layer
+- It is comparatively easy to build DDL  for silver layer comapare broze layer
+- since because we are not making any changes while loading data from bronze layer to silver layer so the DDL will be same in the silver layer also
+---
 
 
 
