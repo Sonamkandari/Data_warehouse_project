@@ -549,8 +549,11 @@ PRINT'>> Truncating Table:bronze.crm_prd_info '
 ---
 ## Second part of the project to build Silver Layer of the Project
 ---
-what we gonna do in it now
+
+- what we gonna do in it now
 ![Uploading image.png…]()
 
+---
+- Explore & Understand the data
 
 
