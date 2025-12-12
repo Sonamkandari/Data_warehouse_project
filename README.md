@@ -579,11 +579,64 @@ specification of Bronze layer
 <img width="947" height="747" alt="image" src="https://github.com/user-attachments/assets/a2502970-6dd5-4b79-b177-1c7f720d1be2" />
 ---
 
-## Before loading data from broze layer to silver layer we have to check Quality issues in Bronze layer
-
--  build and Load CRM_cust_info
+### Before loading data from bronze layer to silver layer we have to check Quality issues in Bronze layer
+---
+# build and Load CRM_cust_info
 - we will take each table one by one and check the quality issues of each table one by one
 ---
 - check for Nulls or Duplicates in Primary Key
 - Expectation: No Reult
-- 
+---
+## we had done diffrent types of data transformation
+
+```
+-- now inserting clean data inside silver layer
+INSERT INTO silver.crm_cust_info(
+ cst_id,
+ cst_key,
+ cst_firstname,
+ cst_lastname,
+ cst_marital_status,
+ cst_gndr,
+ cst_create_date)
+
+-- quality check for unwanted spaces in string values
+-- now we have to write transformation
+SELECT
+    cst_id,
+    cst_key,
+    TRIM(cst_firstname) AS cst_firstname,
+    TRIM(cst_lastname) AS cst_lastname,
+
+    CASE 
+        WHEN cst_marital_status = 'S' THEN 'Single'
+        WHEN cst_marital_status = 'M' THEN 'Married'   -- fixed spelling
+        ELSE 'secret'
+    END AS cst_marital_status,
+
+    CASE
+        WHEN cst_gndr = 'F' THEN 'Female'
+        WHEN cst_gndr = 'M' THEN 'Male'
+        ELSE 'Other_gender'
+    END AS cst_gndr,
+
+    cst_create_date
+
+FROM (
+        SELECT
+            *,
+            ROW_NUMBER() OVER(PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_last
+        FROM bronze.crm_cust_info
+        WHERE cst_id IS NOT NULL
+     ) t
+WHERE flag_last = 1;
+
+
+
+```
+# Diffrent Transformation which we had done  / types of data cleansing
+- 1: **Triming**: Removes unnecessary spaces to ensures data consistency and uniformity across all records
+- 2: **Data Normalization & Standardization**: Maps coded values to meaningful, user-friendly descripttion
+- 3: **Handling Missing Data**: Fills in the blanks by adding a default values
+- 4: **Remove Duplicates**: Ensures only record per entity by identifying and retaining the most relevant row
+  
