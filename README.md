@@ -567,7 +567,7 @@ specification of Bronze layer
 <img width="784" height="261" alt="image" src="https://github.com/user-attachments/assets/075387cf-f4c8-45a3-a5ba-e27b98c89b53" />
 
 ---
-## Building data Defination language for bronze layer
+## Building data Defination language for Silver layer
 - It is comparatively easy to build DDL  for silver layer comapare broze layer
 - since because we are not making any changes while loading data from bronze layer to silver layer so the DDL will be same in the silver layer also
 ---
@@ -578,8 +578,10 @@ specification of Bronze layer
 - Here i created successfully  6 tables for silver layer also
 <img width="947" height="747" alt="image" src="https://github.com/user-attachments/assets/a2502970-6dd5-4b79-b177-1c7f720d1be2" />
 ---
+
 ## Before loading data from broze layer to silver layer we have to check Quality issues in Bronze layer
-- # build and Load CRM_cust_info
+
+-  build and Load CRM_cust_info
 - we will take each table one by one and check the quality issues of each table one by one
 ---
 - check for Nulls or Duplicates in Primary Key
