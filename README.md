@@ -787,8 +787,44 @@ from bronze.erp_cust_az12
 - after corretion done the data quality
 - well cleaned data
 <img width="535" height="483" alt="image" src="https://github.com/user-attachments/assets/a52274eb-6bf3-4913-a53e-1f10a7066cab" />
+
 ---  
 ## Different types of Data transformation we had done
 - **Handled Invalid Values**
 - **Done Data Normalization**
 - **Handled the Missing Values**
+---
+## Cleaned and Load erp_loc_a101
+- here we have only two tables to clean and update the data
+-after claning both the tables i had inserted that cleaned data into siver table
+```
+
+INSERT INTO silver.erp_loc_a101 (
+    cid,
+    cntry
+)
+SELECT 
+    REPLACE(cid, '-', '') AS cid,
+    CASE
+        WHEN TRIM(cntry) = 'DE' THEN 'GERMANY'
+        WHEN TRIM(cntry) IN ('US', 'USA') THEN 'United States'
+        WHEN TRIM(cntry) = '' OR cntry IS NULL THEN 'NA'
+        ELSE TRIM(cntry)
+    END AS cntry
+FROM bronze.erp_loc_a101;
+-- Data Standardization & Consistency
+
+```
+## Different types of Data transformation we had done
+- handled invalid values
+- Data Normalization
+- Handled missing values
+- Removed unwanted spaces
+---
+<img width="504" height="204" alt="image" src="https://github.com/user-attachments/assets/e7625fda-4f4c-4898-a31b-a30b2ef8870c" />
+---
+
+
+  
+
+ 
