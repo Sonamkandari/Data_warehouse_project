@@ -634,15 +634,23 @@ WHERE flag_last = 1;
 
 
 ```
-# Diffrent Transformation which we had done  / types of data cleansing
-- 1: **Triming**: Removes unnecessary spaces to ensures data consistency and uniformity across all records
-- 2: **Data Normalization & Standardization**: Maps coded values to meaningful, user-friendly descripttion
-- 3: **Handling Missing Data**: Fills in the blanks by adding a default values
-- 4: **Remove Duplicates**: Ensures only record per entity by identifying and retaining the most relevant row
+## Data Validation & Transformation
+- After inserting all the cleaned data, we recheck all columns of the `crm_prd_info` table to ensure data quality.
+## Data Transformations Applied
+The following data transformation techniques were used:
+1. **Derived Columns:**  
+   Create new columns based on calculations or transformations of existing data.
+2. **Data Normalization & Standardization**  
+   Map coded values to meaningful, user-friendly descriptions.
+3. **Handling Missing Data:**  
+   Fill missing values using default or derived values.
+4. **Data Type Casting:**  
+   Convert data from one data type to another as required.
+5. **Data Enrichment:**  
+   Add new, relevant attributes to enhance the dataset for analysis.
 ---
-# clean & Load crm_prd_info
-- Moving into the second table of the bronze layer that is Product_information : prd_info
--  cleaned the 2nd table  crm_prd_info table , we had cleaned all the columns of second table and inserted those cleaned table in the silver layer
+## Clean & Load → `crm_sales_details`
+
  ```
 USE DataWarehouse;
 
@@ -683,15 +691,16 @@ SELECT
 FROM bronze.crm_prd_info;
 
 ```
- -  and after inserting all the cleaned data we will re check the ll the columns of crm_prd_info table 
-# here are the different types of data transformation which we had used here are
-- 1:**Derived Columns**: Create new columns based on calculations or tranformations of existing ones.
-- 2:**Data Normalization & Standardization**: Maps coded values to meaningful, user-friendly descripttion
-- 3:**Handling Missing Data**: Fills in the blanks by adding a default values
-- 4:**Data Type Casting**: we are converting data type to one to another datatype
-- 5:**Data Enrichment**: Add new, relevant data to enhance the dataset for analysis
+ - After inserting all the cleaned data, we recheck all columns of the crm_prd_info table.
+# Data Transformations Applied
+### The following types of data transformations were used:
+- 1:**Derived Columns**: Create new columns based on calculations or transformations of existing data.
+- 2:**Data Normalization & Standardization**: Map coded values to meaningful, user-friendly descriptions.
+- 3:**Handling Missing Data**: Fill missing values using default or derived values.
+- 4:**Data Type Casting**: Convert data from one data type to another as required.
+- 5:**Data Enrichment**:Add new, relevant attributes to enhance the dataset for analysis.
 ---
-# Clean & Load ->CRM_sales_details
+# Clean & Load ->crm_sales_details
 ```
 select 
 sls_ord_num,
@@ -737,17 +746,17 @@ from bronze.crm_sales_details
 <img width="794" height="419" alt="image" src="https://github.com/user-attachments/assets/6ba44dd7-251a-4aac-918a-d6a96f7765d2" />
 
 ---
-- now we had clead safe business data
-- After making correction and cleaning data we will cross check is the data is cleaned or not
-- After that insert data into sales_details table
+- Now we have cleaned and safe business data
+- After applying corrections and cleaning, we cross-check whether the data is clean
+- After validation, we insert the data into the sales_details table
 
-## Quality check of silver table
+## Quality Check of Silver Tables
 
 ---
 ### Diffrent types of data columns we had used are
 - 1: **Handling Invalid Data**
 - 2: **Data Type Casting**
-- 2: **Handling Misssing Data**
+- 2: **Handling Missing Data**
 ---
 ## Clean & Load erp_cust_az12
 
