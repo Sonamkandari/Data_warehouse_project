@@ -1,8 +1,22 @@
 /*
-==============================================
+what i had done here
+============================================================================
 stored procedure: load silver layer (Bronze-> silver )
-==============================================
+============================================================================
+what my Script is doing:
+     This script procedure performs the ETL (Extract,Transform,Load) Process
+	 to populate the 'silver' schema tables from the 'bronze'schema
+Actions Performed:
+     - Truncate silver tables
+	 - Inserts transformed and cleared data from Bronze into silver tables
+Parameters:
+      None.
+	  This stored procedure does not accept any parameters or return any values,
+Usage example;
+       EXEC silver.load_silver;
+==============================================================================
 */
+
 
 -- Created stored procedures
 CREATE OR ALTER PROCEDURE silver.load_silver as
