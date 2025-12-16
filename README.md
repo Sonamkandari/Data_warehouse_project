@@ -1059,4 +1059,4 @@ maintenance
 from bronze.erp_px_cat_g1v2
 ```
 
- 
+# now we had a nice script to insert data from bronze to silver layer but firstly we will create a stored procedure
