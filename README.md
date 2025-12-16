@@ -822,7 +822,9 @@ FROM bronze.erp_loc_a101;
 - Handled missing values
 - Removed unwanted spaces
 ---
-<img width="504" height="204" alt="image" src="https://github.com/user-attachments/assets/e7625fda-4f4c-4898-a31b-a30b2ef8870c" />
+
+
+## Cleaned and load the conttent of erp_px_cat_g1v2
 ---
 # cleanig the last table of our source system
 - quality of the last table is already very good but still i have check all the possible transformations
