@@ -37,6 +37,7 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
  <img width="764" height="495" alt="image" src="https://github.com/user-attachments/assets/e085e083-744d-460d-83ee-970f353ecb41" />
  
 ---
+### keeping some rules in the mind
 - The component of your architecture must not be duplicated. So, we cannot have two parts doing the same thing.
 - The idea here is not to mix the two parts. 
 - if you are a good data architect you should never combine diffrent layers of
