@@ -1164,6 +1164,19 @@ END
 1. Star Schema : it has a central fact table in the middle, surrounded by the dimensions. Table contains transactions and events, whereas the dimensions contain descriptive information. The relations between dimensions, facts, and transactions formed a shape of star, that's why we call it Star Schema. 
 2. Snowflake: snowflake schema looks similar to the star schema also has surrounded by dimensions, and it has a fact table in the middle but here we break the dimensions into small sub-dimensions in case of snowflake. 
 ---
-# For this project, I chose to use Star schema because it is commonly used and perfect for reporting, for example, we are using Power BI. 
+## For this project, I chose to use Star schema because it is commonly used and perfect for reporting, for example, we are using Power BI. 
+---
+# Build the Business Objects
+# Now we gonna detect what are the bussiness objects that are hidden in the source system
+<img width="901" height="599" alt="image" src="https://github.com/user-attachments/assets/1945a471-eedd-4140-80d4-ef8cd4a141fe" />
+---
+- Create Dimention Customers
+- Now in case of Gold layer we are not building tables we are building views
+- It means we will be not having any kind of start procedures or load any load process in gold layer
+- we will be having only data transformation
 
+ <img width="607" height="627" alt="image" src="https://github.com/user-attachments/assets/09cccabd-c8ee-468e-9027-0b59d7d85d92" />
+ 
+---
+- in this case we are using data of silver layer as we know that we already had every thing is prepeared and cleaned up all the data of silver layer
 
