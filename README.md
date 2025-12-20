@@ -1148,7 +1148,8 @@ END
 ---
 - ## what is Data Modeling
 - Data modeling is the  process of taking the raw data and then organise it and structure it in a meaningful way.
-  <img width="1118" height="620" alt="image" src="https://github.com/user-attachments/assets/5b002c1f-9245-4a7e-8e69-c4725d7f1a0a" />
+  <img width="912" height="454" alt="image" src="https://github.com/user-attachments/assets/2e777d74-a3ef-485d-bb4a-c51c3c46cec8" />
+
 ---
 - In Data Modeling we have three different ways on how to draw the different data model
 - **Conceptual Data Model:** conceptual data model does not focus on the details, it just gives the big picture.
