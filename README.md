@@ -1160,9 +1160,11 @@ END
 <img width="674" height="388" alt="image" src="https://github.com/user-attachments/assets/7b4a3103-a5c8-4a5d-8535-761a4a2d64c7" />
 
 ---
-For analytics, and apecially for Data warehousing and business Intelligence we require a special data model that is  Optimize for Reporting and analytics it should be flexible, scalable, and easy to understand. That we have two special data models:
-1. Star Schema
-2. Snowflake
+- For analytics, and apecially for Data warehousing and business Intelligence we require a special data model that is  Optimize for Reporting and analytics it should be flexible, scalable, and easy to understand. That we have two special data models:
+1. Star Schema : it has a central fact table in the middle, surrounded by the dimensions. Table contains transactions and events, whereas the dimensions contain descriptive information. The relations between dimensions, facts, and transactions formed a shape of star, that's why we call it Star Schema. 
+2. Snowflake: snowflake schema looks similar to the star schema also has surrounded by dimensions, and it has a fact table in the middle but here we break the dimensions into small sub-dimensions in case of snowflake. 
 <img width="865" height="526" alt="image" src="https://github.com/user-attachments/assets/f67a7c1d-10a1-4193-b610-b34563480b7f" />
 ---
+# For this project, I chose to use Star schema because it is commonly used and perfect for reporting, for example, we are using Power BI. 
+
 
