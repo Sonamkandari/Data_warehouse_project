@@ -1137,67 +1137,125 @@ BEGIN CATCH
 END CATCH
 END
 ```
-## Now Extending data flow (Draw.io)
-<img width="669" height="494" alt="image" src="https://github.com/user-attachments/assets/7c58c624-b311-4c57-8d4f-8753388fe1a8" />
+# Now Extending Data Flow (Draw.io)
+
+![Data Flow Diagram](https://github.com/user-attachments/assets/7c58c624-b311-4c57-8d4f-8753388fe1a8)
 
 ---
-## Now we gonna build gold_layer
----
-<img width="951" height="265" alt="image" src="https://github.com/user-attachments/assets/e6c10725-c9ef-4d4d-bfae-ea61e34c799f" />
+
+# Now We Are Going to Build the Gold Layer
+
+![Gold Layer Overview](https://github.com/user-attachments/assets/e6c10725-c9ef-4d4d-bfae-ea61e34c799f)
 
 ---
-- ## what is Data Modeling
-- Data modeling is the  process of taking the raw data and then organise it and structure it in a meaningful way.
-  <img width="912" height="454" alt="image" src="https://github.com/user-attachments/assets/2e777d74-a3ef-485d-bb4a-c51c3c46cec8" />
+
+## What is Data Modeling
+
+Data modeling is the process of taking raw data and organizing and structuring it in a meaningful way so that it can be easily analyzed and used for reporting and decision-making.
+
+![Data Modeling](https://github.com/user-attachments/assets/2e777d74-a3ef-485d-bb4a-c51c3c46cec8)
 
 ---
-- In Data Modeling we have three different ways on how to draw the different data model
-- **Conceptual Data Model:** conceptual data model does not focus on the details, it just gives the big picture.
-- **Logical Data Models:** here we specify that what are the different columns and what are the different entities these columns have.
-- **Physical Data Models:**This is where everything gets ready before creating it in the database
- --- 
-  
-<img width="674" height="388" alt="image" src="https://github.com/user-attachments/assets/7b4a3103-a5c8-4a5d-8535-761a4a2d64c7" />
+
+## Types of Data Models
+
+In data modeling, we have three different ways to represent data models:
+
+### Conceptual Data Model
+The conceptual data model does not focus on technical details. It provides a high-level overview of the business and shows the main entities and their relationships.
+
+### Logical Data Model
+The logical data model defines the structure in more detail. It specifies the entities, their attributes (columns), and the relationships between them, without considering database-specific implementations.
+
+### Physical Data Model
+The physical data model represents how the data will actually be stored in the database. This is where everything is finalized before creating the objects in the database, including tables, columns, and data types.
+
+![Data Model Types](https://github.com/user-attachments/assets/7b4a3103-a5c8-4a5d-8535-761a4a2d64c7)
 
 ---
-- For analytics, and apecially for Data warehousing and business Intelligence we require a special data model that is  Optimize for Reporting and analytics it should be flexible, scalable, and easy to understand. That we have two special data models:
-1. Star Schema : it has a central fact table in the middle, surrounded by the dimensions. Table contains transactions and events, whereas the dimensions contain descriptive information. The relations between dimensions, facts, and transactions formed a shape of star, that's why we call it Star Schema. 
-2. Snowflake: snowflake schema looks similar to the star schema also has surrounded by dimensions, and it has a fact table in the middle but here we break the dimensions into small sub-dimensions in case of snowflake. 
+
+## Data Models for Analytics and Data Warehousing
+
+For analytics—especially for data warehousing and business intelligence—we require a special type of data model that is optimized for reporting and analysis.  
+It should be flexible, scalable, and easy to understand.
+
+There are two commonly used analytical data models:
+
+### 1. Star Schema
+- A star schema has a central **fact table** surrounded by **dimension tables**
+- The fact table contains transactional or event data
+- Dimension tables contain descriptive information
+- The structure forms a star-like shape, which is why it is called a *Star Schema*
+
+### 2. Snowflake Schema
+- The snowflake schema is similar to the star schema
+- It also has a central fact table
+- Dimension tables are normalized and broken down into smaller sub-dimensions
+- This reduces redundancy but increases complexity
+
 ---
-## For this project, I chose to use Star schema because it is commonly used and perfect for reporting, for example, we are using Power BI. 
+
+## Schema Choice for This Project
+
+For this project, I chose to use the **Star Schema** because it is widely used and well-suited for reporting and analytics.  
+It works especially well with tools such as **Power BI**, making reports easier to design and understand.
+
 ---
+
 # Build the Business Objects
-# Now we gonna detect what are the bussiness objects that are hidden in the source system
-<img width="901" height="599" alt="image" src="https://github.com/user-attachments/assets/1945a471-eedd-4140-80d4-ef8cd4a141fe" />
----
-- Create Dimention Customers
-- Now in case of Gold layer we are not building tables we are building views
-- It means we will be not having any kind of start procedures or load any load process in gold layer
-- we will be having only data transformation
 
- <img width="607" height="627" alt="image" src="https://github.com/user-attachments/assets/09cccabd-c8ee-468e-9027-0b59d7d85d92" />
- 
+## Identifying Business Objects from the Source System
+
+Now we identify the business objects that are hidden within the source system.
+
+![Business Objects](https://github.com/user-attachments/assets/1945a471-eedd-4140-80d4-ef8cd4a141fe)
+
 ---
-- in this case we are using data of silver layer as we know that we already had every thing is prepeared and cleaned up all the data of silver layer
+
+## Create Dimension: Customers
+
+- In the **Gold Layer**, we do not create physical tables; instead, we create **views**
+- There are no stored procedures or data load processes in the Gold Layer
+- The Gold Layer focuses only on **data transformation and business logic**
+
+![Customer Dimension](https://github.com/user-attachments/assets/09cccabd-c8ee-468e-9027-0b59d7d85d92)
+
 ---
+
+- The Gold Layer uses data from the **Silver Layer**
+- All Silver Layer data is already cleaned, validated, and prepared
+- The Gold Layer transforms this data into analytics-ready datasets
+
 ---
-- Some objects are remainnig
---- 
+
+## Remaining Business Objects
+
+Some business objects are still remaining to be created.
+
+---
+
 ## Created Data Model
-<img width="1148" height="505" alt="image" src="https://github.com/user-attachments/assets/d7c8404b-ba48-4940-82c3-e4b818925001" />
----
-## Creating Data Catalog
-- In data catalog we describe each query what it does and how it does
----
 
- A data catalog is a centralized inventory of an organization’s data assets that makes it easy to find, understand, trust, and use data. It provides shared metadata, lineage, and data quality information to support governance, security, and compliance. By breaking down data silos, it enables self-service analytics, improves productivity, and serves as a single source of truth for faster, better decision-making.
- 
----
-# Now Creating Final Data Flow Diagram
----
-
-<img width="1186" height="529" alt="image" src="https://github.com/user-attachments/assets/077d586a-0f81-44b7-aead-ecc0238f9564" />
+![Created Data Model](https://github.com/user-attachments/assets/d7c8404b-ba48-4940-82c3-e4b818925001)
 
 ---
+
+# Creating the Data Catalog
+
+In the data catalog, we describe each query:
+- What it does
+- How it does it
+- What data it produces
+
+A **data catalog** is a centralized inventory of an organization’s data assets that makes it easy to find, understand, trust, and use data.  
+It provides shared metadata, data lineage, and data quality information to support governance, security, and compliance.
+
+By breaking down data silos, a data catalog enables self-service analytics, improves productivity, and serves as a single source of truth for faster and better decision-making.
+
+---
+
+# Creating the Final Data Flow Diagram
+
+![Final Data Flow Diagram](https://github.com/user-attachments/assets/077d586a-0f81-44b7-aead-ecc0238f9564)
 
 
