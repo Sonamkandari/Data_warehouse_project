@@ -1259,3 +1259,10 @@ By breaking down data silos, a data catalog enables self-service analytics, impr
 ![Final Data Flow Diagram](https://github.com/user-attachments/assets/077d586a-0f81-44b7-aead-ecc0238f9564)
 
 
+---
+## How Data is loading from silver layer t o the gold layer
+<img width="948" height="471" alt="image" src="https://github.com/user-attachments/assets/9d4c9784-b9c5-41d5-81fa-3a17d4d00dda" />
+
+
+
+
